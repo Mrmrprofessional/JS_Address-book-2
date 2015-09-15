@@ -33,9 +33,9 @@ $(document).ready(function() {
     $("#new-addresses").append('<div class="new-address">' +
                                 '<div class="form-group">' +
                                     '<label for="new-type">Address Type</label>' +
-                                    '<select name="new-type">' +
-                                        '<option class="new-type" value="Residential">Residential</option>' +
-                                        '<option class="new-type" value="Commercial">Commercial</option>' +
+                                    '<select class="new-type" name="new-type">' +
+                                        '<option value="Residential">Residential</option>' +
+                                        '<option value="Commercial">Commercial</option>' +
                                     '</select>' +
                                 '</div>' +
                                  '<div class="form-group">' +
@@ -76,7 +76,7 @@ $("form#new-contact").submit(function(event) {
     $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
 
     $(".contact").last().click(function() {
-      $("#show-contact").show();
+      $("#show-contact").fadeIn(1000).show();
 
       $("#show-contact h2").text(newContact.fullName());
       $(".first-name").text(newContact.firstName);
